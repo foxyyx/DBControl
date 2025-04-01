@@ -6,10 +6,6 @@ DB Control é uma biblioteca em Lua para facilitar o gerenciamento de bancos de 
 ## Instalação
 Basta incluir o script no seu projeto MTA e chamar a função `Database:new("arquivo.db")` para inicializar a conexão com o banco de dados.
 
-```lua
-local db = Database:new("meubanco.db")
-```
-
 ## Funcionalidades
 
 ### Criando uma instância do banco de dados
