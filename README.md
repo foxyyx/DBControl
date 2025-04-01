@@ -4,7 +4,7 @@
 DB Control é uma biblioteca em Lua para facilitar o gerenciamento de bancos de dados SQLite no MTA (Multi Theft Auto). Este sistema permite criar, inserir, atualizar, deletar e consultar dados de forma simples e organizada.
 
 ## Instalação
-Basta incluir o script no seu projeto MTA e chamar a função `Database:new("arquivo.db")` para inicializar a conexão com o banco de dados.
+Basta incluir o script no seu projeto MTA e chamar a função `Database:new("meubanco.db")` para inicializar a conexão com o banco de dados.
 
 ## Funcionalidades
 
