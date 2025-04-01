@@ -80,8 +80,6 @@ end)
 - **`_type`**: (opcional) Tipo de operador para as condições. Por padrão é `"AND"`, mas pode ser alterado para `"OR"`.
 - **`callback`**: Função opcional que será chamada após a deleção ser concluída. Recebe como argumento o resultado da operação.
 
-| id | nome   | idade |
-|----|--------|-------|
 
 ### Buscar dados (`find`)
 ```lua
