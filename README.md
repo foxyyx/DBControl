@@ -10,7 +10,7 @@ Basta incluir o script no seu projeto MTA e chamar a função `Database:new("arq
 
 ### Criando uma instância do banco de dados
 ```lua
-local db = Database:new("meubanco.db")
+local db = Database:new("meubanco.db") // Retorna uma instancia
 ```
 - **`storage`**: Caminho do arquivo de banco de dados SQLite. Pode ser um caminho relativo ou absoluto.
 
