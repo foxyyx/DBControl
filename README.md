@@ -6,9 +6,6 @@ DB Control é uma biblioteca em Lua para facilitar o gerenciamento de bancos de 
 ## Instalação
 Basta incluir o script no seu projeto MTA e chamar a função `Database:new("arquivo.db")` para inicializar a conexão com o banco de dados.
 
-## Callback
-As funções de callback são opcionais, a função retorna os mesmo valores dos argumentos da callback ( apenas `find` e `exists` ).
-
 ## Funcionalidades
 
 ### Criando uma instância do banco de dados
@@ -118,6 +115,9 @@ db:setProperties({ queueDelay = 200 })
 ```
 - **`properties`**: Tabela de propriedades que podem ser configuradas. Atualmente, a única propriedade configurável é:
   - **`queueDelay`**: Intervalo (em milissegundos) entre a execução das consultas na fila. O valor padrão é 100.
+
+## Callback
+As funções de callback são opcionais, a função retorna os mesmo valores dos argumentos da callback ( apenas `find` e `exists` ).
 
 ## Conclusão
 O **DB Control** é uma solução eficiente para manipulação de bancos de dados SQLite no MTA, oferecendo suporte para operações assíncronas com callbacks.
