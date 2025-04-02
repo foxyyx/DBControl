@@ -21,16 +21,13 @@ function Database:set(structures)
 
     for tableName, structure in pairs(structures) do
         local columns = {}
+        local primaryKey
 
         for columnName, attributes in pairs(structure) do
             local preparedString = columnName.." "..attributes.type
 
-            if attributes.primaryKey then
-                preparedString = preparedString.." PRIMARY KEY"
-            end
-
             if attributes.autoIncrement then
-                preparedString = preparedString.." AUTOINCREMENT"
+                preparedString = preparedString.." AUTO_INCREMENT"
             end
 
             if not attributes.null then
@@ -40,8 +37,13 @@ function Database:set(structures)
             if attributes.default then
                 preparedString = preparedString.." DEFAULT "..attributes.default
             end
-
-            columns[#columns + 1] = preparedString
+    
+            if attributes.primaryKey then
+                preparedString = preparedString.." PRIMARY KEY"
+                table.insert(columns, 1, preparedString)
+            else
+                columns[#columns + 1] = preparedString
+            end
         end
 
         local query = "CREATE TABLE IF NOT EXISTS `"..tableName.."` ("..table.concat(columns, ", ")..")"
